@@ -1,42 +1,194 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+body {
+  background: #ffffff;
+  /* color: #fff; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Full screen layout */
+.app-container {
+  min-height: 100vh;
+
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Auth Card */
+.auth-card {
+  width: 360px;
+  padding: 48px 36px;
+  border: 1px solid #222;
+ /* From https://css.glass */
+background: rgba(255, 255, 255, 0.2);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+
+.app-title {
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.app-subtitle {
+  font-size: 13px;
+  color: #ffffff;
+  margin-bottom: 32px;
+}
+
+.auth-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Profile Card */
+.profile-card {
+  width: 380px;
+  padding: 48px 36px;
+  /* From https://css.glass */
+background: rgba(255, 255, 255, 0.2);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+  text-align: center;
+}
+
+.profile-avatar {
+  width: 50px;
+  height: 50px;
+
+  border-radius: 50%;
+  margin-bottom: 20px;
+  border: 2px solid #ffffff00;
+}
+
+.profile-name {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.profile-email {
+  font-size: 13px;
+  color: #ffffff;
+  margin-bottom: 28px;
+}
+
+/* Metadata */
+.profile-meta {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 32px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.profile-meta span {
+  display: block;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+
+.profile-meta strong {
+  font-weight: 500;
+  color: #fff;
+}
+.description{
+  font-size: 12px;
+  color: #ffffff;
+  margin-top: 16px;
+}
+
+/* Sign out button */
+button {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #fff;
+  background: transparent;
+  color: #fff;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  background: #fff;
+  color: #000;
+}
+
+.bg-animated {
+  background:
+    radial-gradient(100% 100% at 4% 3%, #ffffff 0%, transparent),
+    radial-gradient(
+      100% 100% at var(--g2-1-x-position) var(--g2-1-y-position),
+      #1d1ba7 -32%,
+      transparent
+    ),
+    radial-gradient(
+      100% 100% at var(--g2-2-x-position) var(--g2-2-y-position),
+      #235fd7 0%,
+      transparent
+    ),
+    #ffffff;
+  animation-name: g-2;
+  animation-iteration-count: infinite;
+  animation-duration: 10s;
+  transition-timing-function: ease-in-out;
+}
+@property --g2-1-x-position {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 87.96875%;
+}
+@property --g2-1-y-position {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 91.1328125%;
+}
+@property --g2-2-x-position {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 13.398437500000002%;
+}
+@property --g2-2-y-position {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 82.734375%;
+}
+:root {
+  --g2-1-x-position: 87.96875%;
+  --g2-1-y-position: 91.1328125%;
+  --g2-2-x-position: 13.398437500000002%;
+  --g2-2-y-position: 82.734375%;
+}
+@keyframes g-2 {
+  50% {
+    --g2-1-x-position: 15%;
+    --g2-1-y-position: 15%;
+    --g2-2-x-position: 61.21093749999999%;
+    --g2-2-y-position: 13.750000000000002%;
   }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }

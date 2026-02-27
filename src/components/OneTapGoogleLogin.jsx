@@ -1,20 +1,13 @@
-import React from "react";
-import { GoogleLogin } from '@react-oauth/google';
-function OneTapGoogleLogin() {
+import { GoogleLogin } from "@react-oauth/google";
+
+function OneTapGoogleLogin({ onSuccess, onError }) {
   return (
-    <div>
-      OneTapGoogleLogin
-      <GoogleLogin
-        onSuccess={(credentialResponse) => {
-          console.log(credentialResponse);
-        }}
-        onError={() => {
-          console.log("Login Failed");
-        }}
-        useOneTap
-      />
-      ;
-    </div>
+    <GoogleLogin
+      onSuccess={onSuccess}
+      onError={onError}
+      useOneTap
+      text="One Tap"
+    />
   );
 }
 
