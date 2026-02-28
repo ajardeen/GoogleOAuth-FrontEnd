@@ -55,6 +55,7 @@ body {
 .auth-actions {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 16px;
 }
 
@@ -191,3 +192,9 @@ button:hover {
     --g2-2-y-position: 13.750000000000002%;
   }
 }
+
+
+/* google auth style  */
+/* .haAclf,.S9gUrf-YoZ4jf *{
+  min-width: 100% !important;
+} */
