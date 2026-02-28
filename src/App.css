@@ -29,16 +29,15 @@ body {
   width: 360px;
   padding: 48px 36px;
   border: 1px solid #222;
- /* From https://css.glass */
-background: rgba(255, 255, 255, 0.2);
-border-radius: 16px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(5px);
--webkit-backdrop-filter: blur(5px);
-border: 1px solid rgba(255, 255, 255, 0.3);
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   text-align: center;
 }
-
 
 .app-title {
   font-size: 22px;
@@ -64,12 +63,12 @@ border: 1px solid rgba(255, 255, 255, 0.3);
   width: 380px;
   padding: 48px 36px;
   /* From https://css.glass */
-background: rgba(255, 255, 255, 0.2);
-border-radius: 16px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(5px);
--webkit-backdrop-filter: blur(5px);
-border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   text-align: center;
 }
 
@@ -114,7 +113,7 @@ border: 1px solid rgba(255, 255, 255, 0.3);
   font-weight: 500;
   color: #fff;
 }
-.description{
+.description {
   font-size: 12px;
   color: #ffffff;
   margin-top: 16px;

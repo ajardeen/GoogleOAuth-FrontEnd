@@ -7,6 +7,7 @@ function OneTapGoogleLogin({ onSuccess, onError }) {
       onError={onError}
       useOneTap
       text="One Tap"
+      width={"100%"}
     />
   );
 }
